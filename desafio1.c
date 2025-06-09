@@ -74,7 +74,7 @@ void resultado_final(double total_media_temperatura, char *dia_mais_quente, doub
 
    fprintf(arquivo, "Resultados: \n");
    fprintf(arquivo, "\nQual foi a temperatura média registrada durante os meses?\n");
-   fprintf(arquivo, "Resposta: %f\n", total_media_temperatura);
+   fprintf(arquivo, "Resposta: %.2f\n", total_media_temperatura);
 
    fprintf(arquivo, "\nQual foi o dia mais quente e o dia mais frio?\n");
    fprintf(arquivo, "Dia mais quente: %s com %.2f°C\n", dia_mais_quente, temperatura_maxima);
@@ -82,6 +82,9 @@ void resultado_final(double total_media_temperatura, char *dia_mais_quente, doub
 
    fprintf(arquivo, "\nQuantos dias tiveram temperatura máxima acima de 30°C?\n"),
        fprintf(arquivo, "Resposta: %d dias\n", dias_acima_30);
+
+   fprintf(arquivo, "\nQual foi a variação média diária (diferença entre máxima e mínima)?\n");
+   fprintf(arquivo, "Não foi possível verificar a temperatura média diária.");
 
    fclose(arquivo);
 }
@@ -120,11 +123,6 @@ int calcular_temperatura_maxima(struct Linha linhas[], int total_linas)
       }
    }
    return temperatura_acima_30;
-}
-
-double calcular_variacao_media_diaria()
-{
-   // printf("Qual foi a variação média diária (diferença entre máxima e mínima)?");
 }
 
 int main()
