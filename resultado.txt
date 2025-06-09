@@ -1,0 +1,11 @@
+Resultados: 
+
+Qual foi a temperatura média registrada durante os meses?
+Resposta: 24,783629
+
+Qual foi o dia mais quente e o dia mais frio?
+Dia mais quente: 2013-05-24 com 38,00°C
+Dia mais frio: 2013-01-05 com 6,00°C
+
+Quantos dias tiveram temperatura máxima acima de 30°C?
+Resposta: 430 dias
