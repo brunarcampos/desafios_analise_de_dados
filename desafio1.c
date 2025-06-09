@@ -96,7 +96,8 @@ void calcular_dia_quente_e_frio(struct Linha linhas[], int total_linas, char *di
    *temperatura_minima = linhas[1].temperatua_media;
    strcpy(dia_mais_quente, linhas[1].data);
    strcpy(dia_mais_frio, linhas[1].data);
-   for (int i = 2; i <= total_linas; i++)
+   int i;
+   for ( i = 2; i <= total_linas; i++)
    {
       if (linhas[i].temperatua_media > *temperatura_maxima)
       {
@@ -115,7 +116,8 @@ int calcular_temperatura_maxima(struct Linha linhas[], int total_linas)
 {
    // printf("Quantos dias tiveram temperatura máxima acima de 30°C?");
    int temperatura_acima_30 = 0;
-   for (int i = 1; i <= total_linas; i++)
+   int i;
+   for (i = 1; i <= total_linas; i++)
    {
       if (linhas[i].temperatua_media > 30.0)
       {
